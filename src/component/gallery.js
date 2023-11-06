@@ -73,7 +73,13 @@ const Gallery = () => {
             />
             <Row gutter={16}>
                 {images.map((image, index) => (
-                    <Col span={6} key={image.id} className="gutter-row ">
+                    <Col
+                        xl={5}
+                        lg={6}
+                        md={8}
+                        xs={12}
+                        key={image.id}
+                        className="gutter-row">
                         <div className="image-container image-cell"
                              style={{margin: '0.5rem'}}
                              draggable
@@ -82,6 +88,7 @@ const Gallery = () => {
                              onDragEnd={handleSort}
                              onDragOver={(e) => e.preventDefault()}
                         >
+                            {index === 0 && <div className="hover-text">Feature Photo</div>}
                             <Checkbox
                                 className="image-checkbox"
                                 checked={image.selected}
@@ -91,7 +98,11 @@ const Gallery = () => {
                         </div>
                     </Col>
                 ))}
-                <Col span={6}>
+                <Col xl={5}
+                     lg={6}
+                     md={8}
+                     xs={12}
+                >
                     <div className="image-container small-image">
                         <Dragger
                             multiple={true}
