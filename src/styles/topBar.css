@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.navbar.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.selected-count {
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+}
+  

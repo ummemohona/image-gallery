@@ -1,0 +1,40 @@
+/* gallery.css */
+.gallery {
+    padding: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(auto-fill, minmax(1fr, 1fr));
+    grid-gap: 16px;
+}
+
+.large-image {
+    width: 400px;
+    height: 455px;
+    object-fit: cover;
+}
+
+.small-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bordered {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.image-cell:hover {
+    background-color: #f2f2f2;
+}
+
+.image-checkbox {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 10;
+}
+  
